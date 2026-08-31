@@ -25,7 +25,7 @@ export default function MobileCTA() {
           <div className="flex gap-2.5">
             <a
               href={"tel:" + PHONE_TEL}
-              className="flex flex-1 items-center justify-center gap-2 rounded-full border border-line py-3.5 text-sm font-semibold text-forest-700"
+              className="flex flex-1 items-center justify-center gap-2 rounded-full border border-line bg-white py-3.5 text-sm font-semibold text-forest-700"
             >
               Call
             </a>
@@ -33,7 +33,7 @@ export default function MobileCTA() {
               href={"https://wa.me/" + WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-[1.6] items-center justify-center gap-2 rounded-full bg-forest-700 py-3.5 text-sm font-semibold text-white"
+              className="flex flex-[1.6] items-center justify-center gap-2 rounded-full bg-sun-400 py-3.5 text-sm font-semibold text-forest-900"
             >
               Get free quote
             </a>

@@ -2,12 +2,11 @@ import { Link } from "react-router-dom";
 import { ADDRESS_LINES, BRAND, PARENT } from "../lib/site.js";
 
 const LINKS = [
-  ["Residential solar", "/#solutions"],
-  ["Commercial solar", "/#solutions"],
-  ["Installation", "/#process"],
-  ["Repair & maintenance", "/#solutions"],
-  ["Subsidy assistance", "/#subsidy"],
+  ["Services", "/services"],
+  ["How it works", "/how-it-works"],
+  ["Government subsidy", "/subsidy"],
   ["Gallery", "/gallery"],
+  ["Contact", "/contact"],
 ];
 
 export default function Footer() {
@@ -32,20 +31,17 @@ export default function Footer() {
 
           <div>
             <h3 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-ink">
-              Services
+              Pages
             </h3>
             <ul className="mt-2 space-y-0.5">
               {LINKS.map(([label, href]) => (
                 <li key={label}>
-                  {href.startsWith("/#") ? (
-                    <a href={href} className="inline-block py-2 text-[13px] text-mute transition-colors hover:text-forest-700">
-                      {label}
-                    </a>
-                  ) : (
-                    <Link to={href} className="inline-block py-2 text-[13px] text-mute transition-colors hover:text-forest-700">
-                      {label}
-                    </Link>
-                  )}
+                  <Link
+                    to={href}
+                    className="inline-block py-2 text-[13px] text-mute transition-colors hover:text-forest-700"
+                  >
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>

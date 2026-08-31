@@ -10,17 +10,47 @@ npm run dev      # http://localhost:5173
 npm run build    # outputs to dist/
 ```
 
+## Pages
+
+| Route            | Holds                                        |
+| ---------------- | -------------------------------------------- |
+| `/`              | Hero, trust strip, language line, savings, what-we-do, subsidy teaser, calculator, work teaser, CTA |
+| `/services`      | Full service list + why ADSS                  |
+| `/how-it-works`  | The six steps + practical FAQs                |
+| `/subsidy`       | Central + Odisha tables + subsidy FAQs        |
+| `/gallery`       | Project gallery with lightbox                 |
+| `/contact`       | Calculator + contact details + map            |
+
+The home page is deliberately short — it answers "what is this, what do I
+save, what does the government give me" and sends people to a page for detail.
+
 ## Structure
 
 ```
 src/
   lib/site.js      ← brand, phone, email, address, nav  (EDIT THIS FIRST)
   lib/images.js    ← image URLs + gallery items
-  components/      ← Hero, TrustBar, Savings, Subsidy, Process, Services,
-                     Calculator, Projects, WhyADSS, FAQ, CTA, Footer, MobileCTA
-  pages/           ← Home.jsx, Gallery.jsx
-public/earth.png   ← rotating globe (CSS spin, 80s loop)
+  components/
+    Hero, TrustBar, LangLine, Savings, Teasers, Calculator,
+    Subsidy, Process, Services, WhyADSS, FAQ, CTA, Footer, MobileCTA
+    ui.jsx         ← Band, PageHero, Reveal, Button, CountUp, SectionHead
+  pages/           ← Home, Services, HowItWorks, SubsidyPage, Gallery, Contact
+public/
+  earth.png        ← rotating globe, desktop (880px)
+  earth-520.png    ← same globe for phones, served via srcSet
 ```
+
+## Copy rules
+
+Write like you are explaining it to a neighbour. Short sentences, no
+industry words. "We file your subsidy" beats "subsidy documentation
+assistance". Where a claim involves money or eligibility, say what it
+depends on — the disclaimers are deliberate, keep them.
+
+Hindi and Odia appear in three places on purpose: the rotating word in
+`LangLine.jsx`, the hero sub-line, and the contact page header. Devanagari
+and Odia need extra line-height — if you add more, give the line
+`leading-[1.32]` or the matras clip.
 
 ## Before launch — TODO
 

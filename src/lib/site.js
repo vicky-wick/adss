@@ -18,10 +18,9 @@ export const MAPS_EMBED =
   "https://www.google.com/maps?q=ADSS+SOLAR+ENERGY,+1st+Floor+Plot+168B,+Bapuji+Nagar,+Bhubaneswar,+Odisha+751009&output=embed";
 
 export const NAV = [
-  { label: "Solutions", href: "/#solutions" },
-  { label: "How It Works", href: "/#process" },
-  { label: "Subsidy", href: "/#subsidy" },
-  { label: "Savings", href: "/#calculator" },
+  { label: "Services", href: "/services" },
+  { label: "How It Works", href: "/how-it-works" },
+  { label: "Subsidy", href: "/subsidy" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];

@@ -2,12 +2,12 @@ import { Reveal, Section, SectionHead } from "./ui.jsx";
 import { IMG } from "../lib/images.js";
 
 const REASONS = [
-  ["Local expertise", "Based in Bhubaneswar, serving customers across Odisha."],
-  ["Complete support", "From the first consultation through installation and commissioning."],
-  ["Scheme assistance", "We help you understand and navigate the applicable subsidy process."],
-  ["Transparent process", "Clear communication on sizing, cost, timeline and documentation."],
-  ["After-sales service", "We do not disappear once the system is switched on."],
-  ["Built for the long run", "The goal is lower bills for years, not just panels on a roof."],
+  ["We are here", "Our office is in Bapuji Nagar. You can walk in and find a person."],
+  ["One team, whole job", "Survey, design, install, meter, subsidy — nobody else to chase."],
+  ["We know the forms", "The subsidy process is our daily work, not something we look up."],
+  ["No surprise pricing", "The number we give you is the number you pay."],
+  ["We pick up the phone", "After the install too. That is the part most people get wrong."],
+  ["Built to last 25 years", "We would rather fit it properly than fit it fast."],
 ];
 
 export default function WhyADSS() {
@@ -17,14 +17,14 @@ export default function WhyADSS() {
         <div className="lg:col-span-5">
           <SectionHead
             eyebrow="Why ADSS"
-            title="A local team you can actually reach."
-            sub="ADSS Solar Energy is a division of ADSS Enterprises Pvt. Ltd., working with homeowners, businesses and institutions across Odisha."
+            title="Why people pick us."
+            sub="ADSS Solar Energy is a division of ADSS Enterprises Pvt. Ltd. We work with homes, shops and offices across Odisha."
           />
           <Reveal delay={0.15}>
             <div className="mt-9 overflow-hidden rounded-3xl border border-line">
               <img
                 src={IMG.roofSunset}
-                alt="Rooftop solar installation at sunset"
+                alt="A rooftop solar installation at sunset"
                 loading="lazy"
                 className="aspect-[4/3] w-full object-cover"
               />

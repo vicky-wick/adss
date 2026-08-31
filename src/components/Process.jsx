@@ -3,12 +3,12 @@ import { useRef } from "react";
 import { Reveal, SectionHead, Section } from "./ui.jsx";
 
 const STEPS = [
-  ["Site assessment", "We review your electricity usage, roof area, shading and requirement."],
-  ["System design", "We recommend the right capacity and configuration for your consumption."],
-  ["Subsidy & documentation", "Assistance with the applicable government process and paperwork."],
-  ["Installation", "Professional rooftop installation with quality components and structure."],
-  ["Inspection & commissioning", "Coordination through inspection, net metering and commissioning."],
-  ["Subsidy follow-up", "Support through the applicable subsidy-release process."],
+  ["We visit your roof", "Free. We measure the space, check for shade and look at your last bill.", "bg-sky-100 text-sky-700"],
+  ["We give you one number", "How many kW you need, what it will cost, and what you get back. In writing.", "bg-sun-100 text-forest-700"],
+  ["We file your subsidy", "We prepare and submit the application and the DISCOM forms for you.", "bg-mint-200 text-forest-700"],
+  ["We install it", "Our team fits the structure, the panels and the inverter. Usually a few days.", "bg-ember-100 text-ember-600"],
+  ["We get it connected", "Inspection, net meter, grid connection. We follow it up until it is live.", "bg-sky-100 text-sky-700"],
+  ["We chase your money", "We stay on the subsidy until it reaches your bank account.", "bg-sun-100 text-forest-700"],
 ];
 
 export default function Process() {
@@ -19,9 +19,9 @@ export default function Process() {
   return (
     <Section id="process" className="py-20 sm:py-28">
       <SectionHead
-        eyebrow="How it works"
-        title={<>Solar is simple.<br />The paperwork shouldn't be your problem.</>}
-        sub="Six steps, one team. You approve the decisions — we run the process."
+        eyebrow="The steps"
+        title={<>Six steps.<br />You only have to say yes.</>}
+        sub="This is the whole job, start to finish. The forms and the follow-ups are our side of it."
       />
 
       <div ref={ref} className="relative mt-14 pl-10 sm:pl-14">
@@ -33,10 +33,10 @@ export default function Process() {
         />
 
         <div className="space-y-10 sm:space-y-12">
-          {STEPS.map(([title, body], i) => (
+          {STEPS.map(([title, body, tint], i) => (
             <Reveal key={title} delay={i * 0.04}>
               <div className="relative">
-                <span className="absolute -left-10 top-0 grid h-[27px] w-[27px] place-items-center rounded-full border border-line bg-white text-[11px] font-bold text-forest-700 sm:-left-14 sm:h-[43px] sm:w-[43px] sm:text-[13px]">
+                <span className={"absolute -left-10 top-0 grid h-[27px] w-[27px] place-items-center rounded-full text-[11px] font-bold sm:-left-14 sm:h-[43px] sm:w-[43px] sm:text-[13px] " + tint}>
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="text-lg font-bold tracking-tight text-ink sm:text-xl">{title}</h3>

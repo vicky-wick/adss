@@ -104,8 +104,8 @@ export default function Hero() {
               className="md:col-span-7"
             >
               <h1 className="text-[clamp(2.35rem,6.6vw,4.75rem)] leading-[1.03] font-bold tracking-[-0.04em] text-ink">
-                Power your home with the sun.
-                <span className="block text-forest-500">Cut your electricity bills.</span>
+                Put solar on your roof.
+                <span className="block text-forest-500">Pay less every month.</span>
               </h1>
             </motion.div>
 
@@ -116,15 +116,15 @@ export default function Hero() {
               className="md:col-span-5 md:pt-3"
             >
               <p className="text-[15px] leading-relaxed text-mute sm:text-[17px]">
-                Complete rooftop solar in Odisha — site assessment, government subsidy assistance,
-                documentation, installation and commissioning, handled end to end.
+                We install rooftop solar across Odisha, get you the government subsidy, and handle
+                every form in between. You just sign where we point. <span className="font-deva font-semibold text-forest-600">बस इतना ही।</span>
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <Button href="#calculator" variant="primary">
-                  Get your free estimate
+                <Button href="#calculator" variant="sun">
+                  See what I would save
                 </Button>
                 <Button href={"tel:" + PHONE_TEL} variant="ghost">
-                  Talk to a solar expert
+                  Call and ask us
                 </Button>
               </div>
             </motion.div>
@@ -133,22 +133,22 @@ export default function Hero() {
           {/* stat chips */}
           <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-14 sm:grid-cols-4">
             {[
-              ["Up to ₹78,000", "PM Surya Ghar central subsidy"],
-              ["+ ₹60,000", "Odisha state support (3 kWp+)"],
-              ["End to end", "Design → install → commissioning"],
-              ["Bhubaneswar", "Local team, on-ground service"],
-            ].map(([big, small], i) => (
+              ["₹78,000", "Central subsidy, up to", "bg-sun-100 border-sun-300/60"],
+              ["₹60,000", "Odisha adds, up to", "bg-mint-50 border-mint-200"],
+              ["0 forms", "You fill none of them", "bg-sky-50 border-sky-300/50"],
+              ["Bhubaneswar", "Our team is local", "bg-ember-100 border-ember-400/30"],
+            ].map(([big, small, tone], i) => (
               <motion.div
                 key={big}
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 + i * 0.08, ease }}
-                className="rounded-2xl border border-line bg-white p-4"
+                className={"rounded-2xl border p-4 " + tone}
               >
-                <div className="text-[15px] font-bold tracking-tight text-forest-700 sm:text-lg">
+                <div className="text-[17px] font-bold tracking-tight text-forest-700 sm:text-xl">
                   {big}
                 </div>
-                <div className="mt-1 text-[12px] leading-snug text-mute">{small}</div>
+                <div className="mt-1 text-[12px] leading-snug text-forest-700/65">{small}</div>
               </motion.div>
             ))}
           </div>

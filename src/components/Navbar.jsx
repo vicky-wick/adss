@@ -45,30 +45,25 @@ export default function Navbar() {
           </Link>
 
           <div className="hidden items-center gap-1 lg:flex">
-            {NAV.map((n) =>
-              n.href.startsWith("/#") ? (
-                <a
-                  key={n.label}
-                  href={n.href}
-                  className="rounded-full px-3.5 py-2 text-[13px] font-medium text-mute transition-colors hover:bg-forest-50 hover:text-forest-700"
-                >
-                  {n.label}
-                </a>
-              ) : (
-                <Link
-                  key={n.label}
-                  to={n.href}
-                  className="rounded-full px-3.5 py-2 text-[13px] font-medium text-mute transition-colors hover:bg-forest-50 hover:text-forest-700"
-                >
-                  {n.label}
-                </Link>
-              )
-            )}
+            {NAV.map((n) => (
+              <Link
+                key={n.label}
+                to={n.href}
+                className={
+                  "rounded-full px-3.5 py-2 text-[13px] font-medium transition-colors " +
+                  (pathname === n.href
+                    ? "bg-forest-700 text-white"
+                    : "text-mute hover:bg-forest-50 hover:text-forest-700")
+                }
+              >
+                {n.label}
+              </Link>
+            ))}
           </div>
 
           <div className="flex items-center gap-2">
             <span className="hidden sm:block">
-              <Button href="/#calculator" variant="primary" className="px-5 py-2.5 text-[13px]">
+              <Button as={Link} to="/contact" variant="sun" className="px-5 py-2.5 text-[13px]">
                 Free estimate
               </Button>
             </span>
@@ -102,31 +97,29 @@ export default function Navbar() {
           >
             <div className="flex h-full flex-col">
               <div className="flex-1">
-                {NAV.map((n, i) => {
-                  const cls =
-                    "block border-b border-white/10 py-4 text-2xl font-semibold tracking-tight text-white";
-                  return (
-                    <motion.div
-                      key={n.label}
-                      initial={{ opacity: 0, x: -14 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.05 + i * 0.05, duration: 0.4, ease }}
+                {[{ label: "Home", href: "/" }, ...NAV].map((n, i) => (
+                  <motion.div
+                    key={n.label}
+                    initial={{ opacity: 0, x: -14 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.05 + i * 0.05, duration: 0.4, ease }}
+                  >
+                    <Link
+                      to={n.href}
+                      onClick={() => setOpen(false)}
+                      className={
+                        "flex items-center justify-between border-b border-white/10 py-4 text-2xl font-semibold tracking-tight " +
+                        (pathname === n.href ? "text-sun-300" : "text-white")
+                      }
                     >
-                      {n.href.startsWith("/#") ? (
-                        <a href={n.href} className={cls} onClick={() => setOpen(false)}>
-                          {n.label}
-                        </a>
-                      ) : (
-                        <Link to={n.href} className={cls}>
-                          {n.label}
-                        </Link>
-                      )}
-                    </motion.div>
-                  );
-                })}
+                      {n.label}
+                      <span className="text-base text-white/30">→</span>
+                    </Link>
+                  </motion.div>
+                ))}
               </div>
               <div className="grid gap-3">
-                <Button href="/#calculator" variant="sun" onClick={() => setOpen(false)}>
+                <Button as={Link} to="/contact" variant="sun" onClick={() => setOpen(false)}>
                   Get free estimate
                 </Button>
                 <Button href={`tel:${PHONE_TEL}`} variant="light">

@@ -115,3 +115,72 @@ export function SectionHead({ eyebrow, title, sub, tone = "forest", align = "lef
     </div>
   );
 }
+
+/* Coloured full-bleed band — the page's rhythm comes from alternating these */
+export function Band({ tone = "cream", className = "", children, id }) {
+  const tones = {
+    cream: "bg-cream text-ink",
+    white: "bg-white text-ink",
+    sky: "bg-sky-50 text-ink",
+    mint: "bg-mint-50 text-ink",
+    sun: "bg-sun-100 text-ink",
+    forest: "bg-forest-700 text-white",
+    night: "bg-forest-900 text-white",
+  };
+  return (
+    <section id={id} className={`scroll-mt-24 ${tones[tone]} ${className}`}>
+      <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">{children}</div>
+    </section>
+  );
+}
+
+/* Top-of-page header for the inner pages */
+export function PageHero({ eyebrow, title, accent, sub, tone = "forest" }) {
+  const dark = tone === "forest" || tone === "night";
+  const bg = {
+    forest: "bg-forest-700",
+    night: "bg-forest-900",
+    sun: "bg-sun-100",
+    sky: "bg-sky-50",
+  }[tone];
+
+  return (
+    <header className={`relative overflow-hidden ${bg} pt-28 pb-16 sm:pt-36 sm:pb-20`}>
+      <div className="pointer-events-none absolute -top-24 right-[-6%] h-[360px] w-[360px] rounded-full bg-[radial-gradient(circle,rgba(255,197,49,0.3),transparent_68%)] blur-2xl" />
+      <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-8">
+        {eyebrow && (
+          <Reveal>
+            <span
+              className={`inline-flex rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] ${
+                dark ? "bg-white/10 text-sun-300" : "bg-forest-700 text-sun-300"
+              }`}
+            >
+              {eyebrow}
+            </span>
+          </Reveal>
+        )}
+        <Reveal delay={0.06}>
+          <h1
+            className={`mt-6 max-w-3xl text-[clamp(2.3rem,7vw,4.25rem)] leading-[1.05] font-bold tracking-[-0.035em] ${
+              dark ? "text-white" : "text-ink"
+            }`}
+          >
+            {title}
+            {accent && <span className="mt-1 block leading-[1.32] text-sun-400">{accent}</span>}
+          </h1>
+        </Reveal>
+        {sub && (
+          <Reveal delay={0.12}>
+            <p
+              className={`mt-5 max-w-xl text-[15px] leading-relaxed sm:text-[17px] ${
+                dark ? "text-white/65" : "text-mute"
+              }`}
+            >
+              {sub}
+            </p>
+          </Reveal>
+        )}
+      </div>
+    </header>
+  );
+}

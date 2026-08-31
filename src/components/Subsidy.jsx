@@ -49,17 +49,17 @@ export default function Subsidy() {
   return (
     <Section id="subsidy" className="py-20 sm:py-28">
       <SectionHead
-        eyebrow="Government support"
-        title="You may be eligible for solar subsidy."
-        sub="Rooftop solar for homes is supported both centrally and by the state. We help eligible customers understand what applies to them and handle the paperwork that goes with it."
+        eyebrow="The numbers"
+        title="What is actually on the table."
+        sub="Two separate schemes — one from the centre, one from Odisha. A home system can draw on both."
       />
 
       <div className="mt-12 grid gap-5 lg:grid-cols-3">
         <Reveal className="lg:col-span-1">
           <Table
             tag="Central"
-            title="PM Surya Ghar: Muft Bijli Yojana"
-            note="Central assistance for eligible residential rooftop installations."
+            title="PM Surya Ghar"
+            note="Central money for eligible home rooftops."
             rows={CENTRAL}
           />
         </Reveal>
@@ -67,8 +67,8 @@ export default function Subsidy() {
         <Reveal delay={0.08} className="lg:col-span-1">
           <Table
             tag="Odisha"
-            title="State rooftop solar support"
-            note="Additional state support reported under Odisha's rooftop solar initiative."
+            title="Odisha state support"
+            note="Reported additional support on top of the central amount."
             rows={STATE}
           />
         </Reveal>
@@ -100,7 +100,7 @@ export default function Subsidy() {
             </div>
             <div className="mt-6">
               <Button href="#calculator" variant="primary" className="w-full">
-                Check my eligibility
+                Am I eligible? Ask us
               </Button>
             </div>
           </div>
@@ -109,11 +109,11 @@ export default function Subsidy() {
 
       <Reveal delay={0.1}>
         <Disclaimer className="mt-8 max-w-3xl">
-          Potential combined central and Odisha support for eligible residential installations,
-          subject to applicable scheme rules and eligibility. Subsidies, amounts and eligibility are
-          governed by prevailing scheme guidelines, consumer category and DISCOM requirements. The
-          National Portal is the official route for PM Surya Ghar rooftop-solar applications. ADSS
-          Solar Energy is an independent installer and is not a government body.
+          These are the amounts currently on offer for eligible home installations. What you
+          actually receive depends on the scheme rules in force, your consumer category and your
+          DISCOM — we confirm your position before you commit to anything. PM Surya Ghar
+          applications go through the National Portal. ADSS Solar Energy is a private installer,
+          not a government body.
         </Disclaimer>
       </Reveal>
     </Section>

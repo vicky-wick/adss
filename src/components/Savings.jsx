@@ -30,9 +30,9 @@ export default function Savings() {
   return (
     <Section id="savings" className="py-20 sm:py-28">
       <SectionHead
-        eyebrow="The real maths"
-        title={<>Solar isn't expensive.<br />Electricity is.</>}
-        sub="Your roof already receives the sunlight. A rooftop system simply converts what you are currently buying from the grid into what you generate yourself."
+        eyebrow="The point of all this"
+        title={<>Solar is not the expense.<br />Your bill is.</>}
+        sub="Right now you buy every unit from the grid. After solar, your roof makes most of them and you only pay for the rest."
       />
 
       <div className="mt-12 grid gap-6 md:grid-cols-12">
@@ -44,29 +44,29 @@ export default function Savings() {
             </div>
             <div className="mt-8 border-t border-line pt-6">
               <Disclaimer>
-                Illustrative figures. Actual savings depend on consumption, system size, tariff,
-                roof conditions and generation.
+                Example figures. Your saving depends on how much you use, your tariff, your
+                roof and the weather.
               </Disclaimer>
             </div>
           </div>
         </Reveal>
 
         <Reveal delay={0.1} className="md:col-span-5">
-          <div className="flex h-full flex-col justify-between rounded-3xl bg-forest-700 p-6 text-white sm:p-9">
+          <div className="flex h-full flex-col justify-between rounded-3xl bg-gradient-to-br from-forest-600 to-forest-900 p-6 text-white sm:p-9">
             <div>
               <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-sun-300">
-                Potential annual saving
+                What that adds up to in a year
               </p>
               <div className="mt-4 text-5xl font-bold tracking-[-0.03em] sm:text-6xl">
                 ₹<CountUp to={50400} />+
               </div>
               <p className="mt-4 text-sm leading-relaxed text-white/70">
-                On an illustrative ₹4,850 monthly bill, that is roughly the difference a
-                correctly sized rooftop system can make in a year.
+                That is on an example ₹4,850 bill. Your number depends on how much power you
+                actually use — we work it out on the visit.
               </p>
             </div>
             <div className="mt-8 grid grid-cols-2 gap-4 border-t border-white/15 pt-6">
-              {[["25 yrs", "Typical module performance warranty"], ["5–7 yrs", "Typical payback range"]].map(
+              {[["25 yrs", "Panels are warranted this long"], ["5–7 yrs", "Usual time to earn it back"]].map(
                 ([a, b]) => (
                   <div key={a}>
                     <div className="text-xl font-bold tracking-tight text-sun-300">{a}</div>

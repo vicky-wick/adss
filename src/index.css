@@ -3,6 +3,8 @@
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Instrument Serif", Georgia, serif;
+  --font-deva: "Noto Sans Devanagari", "Plus Jakarta Sans", sans-serif;
+  --font-odia: "Noto Sans Oriya", "Plus Jakarta Sans", sans-serif;
 
   --color-ink: #0d1512;
   --color-mute: #5c6b64;
@@ -21,10 +23,23 @@
   --color-sun-400: #FFC531;
   --color-sun-500: #F5A623;
 
+  --color-sky-50: #EEF6FF;
   --color-sky-100: #DDEDFF;
   --color-sky-300: #9CCBF8;
   --color-sky-400: #79B8F5;
+  --color-sky-700: #1D5C8F;
+
+  /* warm accent — used sparingly for "act now" moments */
+  --color-ember-100: #FFEAE0;
+  --color-ember-400: #F2764A;
+  --color-ember-600: #C94F26;
+
+  --color-mint-50: #EFFAF3;
+  --color-mint-200: #BFE6CE;
 }
+
+.font-deva { font-family: var(--font-deva); }
+.font-odia { font-family: var(--font-odia); }
 
 html {
   -webkit-text-size-adjust: 100%;
