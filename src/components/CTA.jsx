@@ -64,7 +64,7 @@ export default function CTA() {
                       href={MAPS_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-2 inline-block text-white underline underline-offset-4 hover:text-sun-300"
+                      className="mt-1 inline-block py-2 text-white underline underline-offset-4 hover:text-sun-300"
                     >
                       Get directions
                     </a>
@@ -74,8 +74,8 @@ export default function CTA() {
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-sun-300">
                     Call
                   </dt>
-                  <dd className="mt-2">
-                    <a href={"tel:" + PHONE_TEL} className="text-sm text-white/75 hover:text-white">
+                  <dd className="mt-0.5">
+                    <a href={"tel:" + PHONE_TEL} className="inline-block py-2 text-sm text-white/75 hover:text-white">
                       {PHONE_DISPLAY}
                     </a>
                   </dd>
@@ -84,8 +84,8 @@ export default function CTA() {
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.14em] text-sun-300">
                     Email
                   </dt>
-                  <dd className="mt-2">
-                    <a href={"mailto:" + EMAIL} className="text-sm text-white/75 hover:text-white">
+                  <dd className="mt-0.5">
+                    <a href={"mailto:" + EMAIL} className="inline-block py-2 text-sm break-all text-white/75 hover:text-white">
                       {EMAIL}
                     </a>
                   </dd>
@@ -107,7 +107,7 @@ export default function CTA() {
                   href={MAPS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between gap-3 border-t border-white/10 px-4 py-3 text-[12px] font-semibold text-white/80 transition-colors hover:text-sun-300"
+                  className="flex min-h-[44px] items-center justify-between gap-3 border-t border-white/10 px-4 py-3 text-[12px] font-semibold text-white/80 transition-colors hover:text-sun-300"
                 >
                   <span>Bapuji Nagar, Bhubaneswar — 751009</span>
                   <span aria-hidden="true">↗</span>

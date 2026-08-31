@@ -37,7 +37,7 @@ export default function Hero() {
   return (
     <section ref={ref} id="home" className="relative">
       {/* sky */}
-      <div className="relative">
+      <div className="relative overflow-x-clip">
         <motion.div
           style={{ opacity: skyFade }}
           className="absolute inset-0 bg-[linear-gradient(180deg,#6FB3F5_0%,#8CC4F7_44%,#BADBFA_76%,#FBFAF7_100%)]"
@@ -74,7 +74,9 @@ export default function Hero() {
                 transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
               >
                 <img
-                  src="/earth.png"
+                  src="/earth-520.png"
+                  srcSet="/earth-520.png 520w, /earth.png 880w"
+                  sizes="(max-width: 640px) 70vw, 510px"
                   alt="Globe covered in solar panels"
                   width="880"
                   height="880"

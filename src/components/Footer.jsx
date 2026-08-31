@@ -34,15 +34,15 @@ export default function Footer() {
             <h3 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-ink">
               Services
             </h3>
-            <ul className="mt-4 space-y-2.5">
+            <ul className="mt-2 space-y-0.5">
               {LINKS.map(([label, href]) => (
                 <li key={label}>
                   {href.startsWith("/#") ? (
-                    <a href={href} className="text-[13px] text-mute transition-colors hover:text-forest-700">
+                    <a href={href} className="inline-block py-2 text-[13px] text-mute transition-colors hover:text-forest-700">
                       {label}
                     </a>
                   ) : (
-                    <Link to={href} className="text-[13px] text-mute transition-colors hover:text-forest-700">
+                    <Link to={href} className="inline-block py-2 text-[13px] text-mute transition-colors hover:text-forest-700">
                       {label}
                     </Link>
                   )}

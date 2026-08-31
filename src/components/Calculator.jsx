@@ -82,9 +82,9 @@ export default function Calculator() {
                   value={Math.min(30000, bill)}
                   onChange={(e) => setBill(Number(e.target.value))}
                   aria-label="Monthly bill slider"
-                  className="mt-5 w-full accent-[#146A4C]"
+                  className="slider mt-3 w-full accent-[#146A4C]"
                 />
-                <div className="mt-1.5 flex justify-between text-[11px] text-mute">
+                <div className="-mt-1 flex justify-between text-[11px] text-mute">
                   <span>₹500</span>
                   <span>₹30,000+</span>
                 </div>

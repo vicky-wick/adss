@@ -18,7 +18,7 @@ export default function Gallery() {
     <>
       <Section className="pt-32 pb-4 sm:pt-40">
         <Reveal>
-          <Link to="/" className="text-[13px] font-medium text-mute hover:text-forest-700">
+          <Link to="/" className="inline-block py-2 text-[13px] font-medium text-mute hover:text-forest-700">
             ← Back to home
           </Link>
         </Reveal>

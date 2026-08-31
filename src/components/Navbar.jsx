@@ -35,7 +35,7 @@ export default function Navbar() {
               : "bg-white/45 ring-1 ring-white/50 backdrop-blur-md"
           }`}
         >
-          <Link to="/" className="flex items-center gap-2.5">
+          <Link to="/" className="flex items-center gap-2.5 py-1.5">
             <span className="grid h-8 w-8 place-items-center rounded-full bg-forest-700">
               <span className="h-3 w-3 rounded-full bg-sun-400" />
             </span>
