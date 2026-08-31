@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "adss", "runtimeExecutable": "npx", "runtimeArgs": ["vite", "--port", "5183"], "port": 5183 }
+  ]
+}
