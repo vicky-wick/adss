@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ADDRESS_LINES, BRAND, PARENT } from "../lib/site.js";
+import { ADDRESS_LINES, BRAND, PARENT, PHONE_DISPLAY, PHONE_TEL, WHATSAPP } from "../lib/site.js";
 
 const LINKS = [
   ["Services", "/services"],
@@ -58,6 +58,26 @@ export default function Footer() {
                 </span>
               ))}
             </address>
+            <ul className="mt-2 space-y-0.5">
+              <li>
+                <a
+                  href={"tel:" + PHONE_TEL}
+                  className="inline-block py-2 text-[13px] text-mute transition-colors hover:text-forest-700"
+                >
+                  {PHONE_DISPLAY}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={"https://wa.me/" + WHATSAPP}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-block py-2 text-[13px] text-mute transition-colors hover:text-forest-700"
+                >
+                  WhatsApp
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
