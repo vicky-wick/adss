@@ -1,11 +1,10 @@
 // ── Single source of truth for business details ───────────────────────────────
-// TODO (client): replace PHONE / WHATSAPP / EMAIL with the real contact details.
 export const BRAND = "ADSS Solar Energy";
 export const PARENT = "A division of ADSS Enterprises Pvt. Ltd.";
 
-export const PHONE_DISPLAY = "+91 XXXXX XXXXX";
-export const PHONE_TEL = "+91XXXXXXXXXX";
-export const WHATSAPP = "91XXXXXXXXXX";
+export const PHONE_DISPLAY = "+91 94391 02030";
+export const PHONE_TEL = "+919439102030";
+export const WHATSAPP = "919439102030";
 export const EMAIL = "contact@adsssolar.in";
 
 export const ADDRESS_LINES = [
